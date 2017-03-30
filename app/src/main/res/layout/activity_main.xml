@@ -1,257 +1,261 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.android.soccerscorecounter.MainActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <ImageView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/soccerfield"
-        android:scaleType="centerCrop"/>
-    <LinearLayout
-        android:id="@+id/activity_main"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-        <LinearLayout
+        android:layout_height="match_parent">
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:src="@drawable/fcporto"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:id="@+id/imageView"/>
-            <TextView
-                android:id="@+id/score_fcporto"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:text="0"
-                style="@style/textAppearance"
-                android:gravity="center"
-                android:layout_weight="1"
-                android:textSize="56sp"/>
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:text="-"
-                style="@style/textAppearance"
-                android:textSize="56sp"
-                android:layout_weight="1"
-                android:gravity="center"/>
-            <TextView
-                android:id="@+id/score_benfica"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:text="0"
-                style="@style/textAppearance"
-                android:gravity="center"
-                android:layout_weight="1"
-                android:textSize="56sp"/>
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_gravity="center"
-                android:src="@drawable/benfica"/>
-        </LinearLayout>
+            android:layout_height="match_parent"
+            android:src="@drawable/soccerfield"
+            android:scaleType="centerCrop"/>
         <LinearLayout
+            android:id="@+id/activity_main"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
+            android:layout_height="match_parent"
+            android:orientation="vertical">
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                style="@style/backgroundcolor"
-                android:orientation="vertical">
-                <Button
-                    android:id="@+id/goal_fcporto_button"
-                    android:layout_width="match_parent"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/fcporto"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:id="@+id/imageView"/>
+                <TextView
+                    android:id="@+id/score_fcporto"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="0"
+                    style="@style/textAppearance"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:textSize="56sp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="-"
+                    style="@style/textAppearance"
+                    android:textSize="56sp"
+                    android:layout_weight="1"
+                    android:gravity="center"/>
+                <TextView
+                    android:id="@+id/score_benfica"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="0"
+                    style="@style/textAppearance"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:textSize="56sp"/>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:src="@drawable/benfica"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="2dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:text="GOAL!"
-                    android:onClick="goalForPorto"/>
-                <Button
-                    android:id="@+id/foul_fcporto_button"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="2dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:text="Foul!"
-                    android:onClick="foulForPorto"/><Button
-                    android:id="@+id/free_kick_fcporto_button"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="2dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:text="Free Kick!"
-                    android:onClick="freeKickForPorto"/>
-                <Button
-                    android:id="@+id/corner_kick_fcporto_button"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="2dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:text="Corner Kick!"
-                    android:onClick="cornerKickForPorto"/>
+                    android:layout_weight="1"
+                    style="@style/backgroundcolor"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/goal_fcporto_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:text="GOAL!"
+                        android:onClick="goalForPorto"/>
+                    <Button
+                        android:id="@+id/foul_fcporto_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:text="Foul!"
+                        android:onClick="foulForPorto"/><Button
+                        android:id="@+id/free_kick_fcporto_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:text="Free Kick!"
+                        android:onClick="freeKickForPorto"/>
+                    <Button
+                        android:id="@+id/corner_kick_fcporto_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:text="Corner Kick!"
+                        android:onClick="cornerKickForPorto"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="#FFFFFF"/>
+                </LinearLayout>
+
                 <View
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
                     android:background="#FFFFFF"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    style="@style/backgroundcolor"
+                    android:layout_weight="1">
+                    <Button
+                        android:id="@+id/goal_benfica_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:text="GOAL!"
+                        android:onClick="goalForBenfica"/>
+                    <Button
+                        android:id="@+id/foul_benfica_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:text="Foul!"
+                        android:onClick="foulForBenfica"/>
+                    <Button
+                        android:id="@+id/free_kick_benfica_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:text="Free Kick!"
+                        android:onClick="freeKickForBenfica"/>
+                    <Button
+                        android:id="@+id/corner_kick_benfica_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:text="Corner Kick!"
+                        android:onClick="cornerKickForBenfica"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="#FFFFFF"/>
+                </LinearLayout>
+
             </LinearLayout>
-
-            <View
-                android:layout_width="2dp"
-                android:layout_height="match_parent"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                android:background="#FFFFFF"/>
-
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                style="@style/backgroundcolor"
-                android:layout_weight="1">
-                <Button
-                    android:id="@+id/goal_benfica_button"
-                    android:layout_width="match_parent"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="2dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:text="GOAL!"
-                    android:onClick="goalForBenfica"/>
-                <Button
-                    android:id="@+id/foul_benfica_button"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="2dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:text="Foul!"
-                    android:onClick="foulForBenfica"/>
-                <Button
-                    android:id="@+id/free_kick_benfica_button"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="2dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:text="Free Kick!"
-                    android:onClick="freeKickForBenfica"/>
-                <Button
-                    android:id="@+id/corner_kick_benfica_button"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="2dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:text="Corner Kick!"
-                    android:onClick="cornerKickForBenfica"/>
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    style="@style/backgroundcolor">
+                    <TextView
+                        android:id="@+id/fouls_of_porto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Fouls : 0"
+                        style="@style/textAppearance"
+                        android:gravity="center"/>
+                    <TextView
+                        android:id="@+id/free_kicks_of_porto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Free Kicks : 0"
+                        style="@style/textAppearance"
+                        android:gravity="center"/>
+                    <TextView
+                        android:id="@+id/corner_kicks_of_porto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Corner Kicks: 0"
+                        style="@style/textAppearance"
+                        android:gravity="center"/>
+                </LinearLayout>
                 <View
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="4dp"
                     android:background="#FFFFFF"/>
-            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    style="@style/backgroundcolor"
+                    android:layout_weight="1">
+                    <TextView
+                        android:id="@+id/fouls_of_benfica"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Fouls : 0"
+                        style="@style/textAppearance"
+                        android:gravity="center"/>
+                    <TextView
+                        android:id="@+id/free_kicks_of_benfica"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Free Kicks : 0"
+                        style="@style/textAppearance"
+                        android:gravity="center"/>
+                    <TextView
+                        android:id="@+id/corner_kicks_of_benfica"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Corner Kicks : 0"
+                        style="@style/textAppearance"
+                        android:gravity="center"/>
+                </LinearLayout>
 
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                style="@style/backgroundcolor">
-                <TextView
-                    android:id="@+id/fouls_of_porto"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Fouls : 0"
-                    style="@style/textAppearance"
-                    android:gravity="center"/>
-                <TextView
-                    android:id="@+id/free_kicks_of_porto"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Free Kicks : 0"
-                    style="@style/textAppearance"
-                    android:gravity="center"/>
-                <TextView
-                    android:id="@+id/corner_kicks_of_porto"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Corner Kicks: 0"
-                    style="@style/textAppearance"
-                    android:gravity="center"/>
             </LinearLayout>
-            <View
-                android:layout_width="2dp"
-                android:layout_height="match_parent"
-                android:layout_marginTop="4dp"
-                android:background="#FFFFFF"/>
-            <LinearLayout
-                android:layout_width="0dp"
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <Button
+                android:id="@+id/reset_button"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                style="@style/backgroundcolor"
-                android:layout_weight="1">
-                <TextView
-                    android:id="@+id/fouls_of_benfica"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Fouls : 0"
-                    style="@style/textAppearance"
-                    android:gravity="center"/>
-                <TextView
-                    android:id="@+id/free_kicks_of_benfica"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Free Kicsk : 0"
-                    style="@style/textAppearance"
-                    android:gravity="center"/>
-                <TextView
-                    android:id="@+id/corner_kicks_of_benfica"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Corner Kicks : 0"
-                    style="@style/textAppearance"
-                    android:gravity="center"/>
-            </LinearLayout>
-
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="16dp"
+                android:text="RESET"
+                android:onClick="resetAllCounters"/>
+            </RelativeLayout>
         </LinearLayout>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-        <Button
-            android:id="@+id/reset_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="16dp"
-            android:text="RESET"
-            android:onClick="resetAllCounters"/>
-        </RelativeLayout>
-    </LinearLayout>
-</RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

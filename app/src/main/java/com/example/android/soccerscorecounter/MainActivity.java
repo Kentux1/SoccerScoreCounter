@@ -20,6 +20,20 @@ public class MainActivity extends AppCompatActivity {
     int foulsBenfica = 0;
     int freeKicksBenfica = 0;
     int cornerKicksBenfica = 0;
+    static final String STATE_FC_PORTO_SCORE = "fcPortoScore";
+    static final String STATE_PORTO_FOULS = "portoFouls";
+    static final String STATE_NUMBER_PORTO_FOULS = "numberPortoFouls";
+    static final String STATE_PORTO_FREE_KICKS = "portoFreeKicks";
+    static final String STATE_NUMBER_PORTO_FREE_KICKS = "numberPortoFreeKicks";
+    static final String STATE_PORTO_CORNER_KICKS = "portoCornerKicks";
+    static final String STATE_NUMBER_PORTO_CORNER_KICKS = "numberPortoCornerKicks";
+    static final String STATE_BENFICA_SCORE = "benficaScore";
+    static final String STATE_BENFICA_FOULS = "benficaFouls";
+    static final String STATE_NUMBER_BENFICA_FOULS = "numberBenficaFouls";
+    static final String STATE_BENFICA_FREE_KICKS = "benficaFreeKicks";
+    static final String STATE_NUMBER_BENFICA_FREE_KICKS = "numberBenficaFreeKicks";
+    static final String STATE_BENFICA_CORNER_KICKS = "benficaCornerKicks";
+    static final String STATE_NUMBER_BENFICA_CORNER_KICKS = "numberBenficaCornerKicks";
     private String numberFoulsPorto;
     private String numberFreeKicksPorto;
     private String numberCornerKicksPorto;
@@ -29,12 +43,51 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
+        outState.putInt(STATE_FC_PORTO_SCORE, scoreFCPorto);
+        outState.putInt(STATE_PORTO_FOULS, foulsFCPorto);
+        outState.putString(STATE_NUMBER_PORTO_FOULS, numberFoulsPorto);
+        outState.putInt(STATE_PORTO_FREE_KICKS, freeKicksFCPorto);
+        outState.putString(STATE_NUMBER_PORTO_FREE_KICKS, numberFreeKicksPorto);
+        outState.putInt(STATE_PORTO_CORNER_KICKS, cornerKicksFCPorto);
+        outState.putString(STATE_NUMBER_PORTO_CORNER_KICKS, numberCornerKicksPorto);
+        outState.putInt(STATE_BENFICA_SCORE, scoreBenfica);
+        outState.putInt(STATE_BENFICA_FOULS, foulsBenfica);
+        outState.putString(STATE_NUMBER_BENFICA_FOULS, numberFoulsBenfica);
+        outState.putInt(STATE_BENFICA_FREE_KICKS, freeKicksBenfica);
+        outState.putString(STATE_NUMBER_BENFICA_FREE_KICKS, numberFreeKicksBenfica);
+        outState.putInt(STATE_BENFICA_CORNER_KICKS, cornerKicksBenfica);
+        outState.putString(STATE_NUMBER_BENFICA_CORNER_KICKS, numberCornerKicksBenfica);
         super.onSaveInstanceState(outState);
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        if (savedInstanceState != null) {
+            // Restore value of members from saved state
+            scoreFCPorto = savedInstanceState.getInt(STATE_FC_PORTO_SCORE);
+            displayScoreFCPorto(scoreFCPorto);
+            foulsFCPorto = savedInstanceState.getInt(STATE_PORTO_FOULS);
+            numberFoulsPorto= savedInstanceState.getString(STATE_NUMBER_PORTO_FOULS);
+            displayFoulsFCPorto(numberFoulsPorto);
+            freeKicksFCPorto = savedInstanceState.getInt(STATE_PORTO_FREE_KICKS);
+            numberFreeKicksPorto= savedInstanceState.getString(STATE_NUMBER_PORTO_FREE_KICKS);
+            displayFreeKicksFCPorto(numberFreeKicksPorto);
+            cornerKicksFCPorto = savedInstanceState.getInt(STATE_PORTO_CORNER_KICKS);
+            numberCornerKicksPorto= savedInstanceState.getString(STATE_NUMBER_PORTO_CORNER_KICKS);
+            displayCornerKicksFCPorto(numberCornerKicksPorto);
+            scoreBenfica = savedInstanceState.getInt(STATE_BENFICA_SCORE);
+            displayScoreBenfica(scoreBenfica);
+            foulsBenfica = savedInstanceState.getInt(STATE_BENFICA_FOULS);
+            numberFoulsBenfica= savedInstanceState.getString(STATE_NUMBER_BENFICA_FOULS);
+            displayFoulsBenfica(numberFoulsBenfica);
+            freeKicksBenfica = savedInstanceState.getInt(STATE_BENFICA_FREE_KICKS);
+            numberFreeKicksBenfica= savedInstanceState.getString(STATE_NUMBER_BENFICA_FREE_KICKS);
+            displayFreeKicksBenfica(numberFreeKicksBenfica);
+            cornerKicksBenfica = savedInstanceState.getInt(STATE_BENFICA_CORNER_KICKS);
+            numberCornerKicksBenfica= savedInstanceState.getString(STATE_NUMBER_BENFICA_CORNER_KICKS);
+            displayCornerKicksBenfica(numberCornerKicksBenfica);
+        }
     }
 
     //This method is called when the GOAL! button is pressed, and adds 1 to the score of FC Porto
@@ -45,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
     //This method is called when the Foul! button is pressed, and adds 1 to the number of Fouls of FC Porto
     public void foulForPorto(View v) {
         foulsFCPorto = foulsFCPorto + 1;
-        String numberFoulsPorto = "Fouls: " + foulsFCPorto;
+        numberFoulsPorto = "Fouls: " + foulsFCPorto;
         displayFoulsFCPorto(numberFoulsPorto);
     }
     //This method is called when the Free Kick! button is pressed, and adds 1 to the number of Free Kicks of FC Porto
