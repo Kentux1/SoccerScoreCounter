@@ -1,5 +1,6 @@
 package com.example.android.soccerscorecounter;
 
+import android.content.res.Configuration;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -40,6 +41,16 @@ public class MainActivity extends AppCompatActivity {
     private String numberFoulsBenfica;
     private String numberFreeKicksBenfica;
     private String numberCornerKicksBenfica;
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        if(newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            getActionBar().hide();
+        } else {
+            getActionBar().show();
+        }
+    }
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
@@ -86,6 +97,23 @@ public class MainActivity extends AppCompatActivity {
             displayFreeKicksBenfica(numberFreeKicksBenfica);
             cornerKicksBenfica = savedInstanceState.getInt(STATE_BENFICA_CORNER_KICKS);
             numberCornerKicksBenfica= savedInstanceState.getString(STATE_NUMBER_BENFICA_CORNER_KICKS);
+            displayCornerKicksBenfica(numberCornerKicksBenfica);
+        }
+        else {
+            scoreFCPorto = 0;
+            displayScoreFCPorto(scoreFCPorto);
+            numberFoulsPorto = getString(R.string.fouls);
+            displayFoulsFCPorto(numberFoulsPorto);
+            numberFreeKicksPorto = getString(R.string.free_kicks);
+            displayFreeKicksFCPorto(numberFreeKicksPorto);
+            numberCornerKicksPorto = getString(R.string.corner_kicks);
+            scoreBenfica = 0;
+            displayScoreBenfica(scoreBenfica);
+            numberFoulsBenfica = getString(R.string.fouls);
+            displayFoulsBenfica(numberFoulsBenfica);
+            numberFreeKicksBenfica = getString(R.string.free_kicks);
+            displayFreeKicksBenfica(numberFreeKicksBenfica);
+            numberCornerKicksBenfica = getString(R.string.corner_kicks);
             displayCornerKicksBenfica(numberCornerKicksBenfica);
         }
     }

@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Soccer Score Counter</string>
+    <string name="default_score">0</string>
+    <string name="vs">-</string>
+    <string name="goal">GOAL!</string>
+    <string name="foul">Foul!</string>
+    <string name="free_kick">Free Kick!</string>
+    <string name="corner_kick">Corner Kick!</string>
+    <string name="fouls">Fouls: 0</string>
+    <string name="free_kicks">Free Kicks: 0</string>
+    <string name="corner_kicks">Corner Kicks: 0</string>
 </resources>
