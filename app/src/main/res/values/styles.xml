@@ -6,17 +6,21 @@
         <!-- Background color of buttons in the app -->
         <item name="colorButtonNormal">#0DAFFF</item>
     </style>
+
     <style name="backgroundcolor">
         <item name="android:textColor">#FFFFFF</item>
     </style>
+
     <style name="textAppearance">
         <item name="android:textColor">#FFFFFF</item>
         <item name="android:textSize">16sp</item>
     </style>
+
     <style name="textAppearanceLand">
         <item name="android:textColor">#FFFFFF</item>
         <item name="android:textSize">14sp</item>
     </style>
+
     <style name="buttonStyle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -24,6 +28,7 @@
         <item name="android:layout_marginLeft">16dp</item>
         <item name="android:layout_marginRight">16dp</item>
     </style>
+
     <style name="buttonStyleLand">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">45dp</item>
@@ -31,12 +36,14 @@
         <item name="android:layout_marginLeft">10dp</item>
         <item name="android:layout_marginRight">10dp</item>
     </style>
+
     <style name="scoreText">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:textSize">56sp</item>
         <item name="android:textColor">#FFFFFF</item>
     </style>
+
     <style name="cardview">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>

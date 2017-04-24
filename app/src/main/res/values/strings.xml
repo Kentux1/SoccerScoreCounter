@@ -9,4 +9,5 @@
     <string name="fouls">Fouls: 0</string>
     <string name="free_kicks">Free Kicks: 0</string>
     <string name="corner_kicks">Corner Kicks: 0</string>
+    <string name="reset">RESET</string>
 </resources>
